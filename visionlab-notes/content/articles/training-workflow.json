@@ -1,0 +1,16 @@
+{
+ "slug":"training-workflow","sections":[
+  {"type":"heading","text":"01 / 建立基本環境"},
+  {"type":"paragraph","text":"Ultralytics 提供 YOLO 訓練工具與 Python API。先建立獨立的 Python 虛擬環境、安裝與所使用版本相容的 PyTorch，再安裝 ultralytics。不同版本的參數與預訓練權重可能不同，應參考對應版本的官方文件。"},
+  {"type":"code","language":"TERMINAL","code":"python -m venv .venv\n# Windows PowerShell\n.venv\\Scripts\\Activate.ps1\npip install ultralytics"},
+  {"type":"heading","text":"02 / 準備 data.yaml"},
+  {"type":"paragraph","text":"資料集通常需要設定訓練集及驗證集位置，以及類別名稱。下列為示意路徑，需替換成自己電腦的實際位置。"},
+  {"type":"code","language":"YAML · EXAMPLE","code":"path: ./dataset\ntrain: images/train\nval: images/val\nnames:\n  0: scratch\n  1: stain"},
+  {"type":"heading","text":"03 / 啟動訓練"},
+  {"type":"paragraph","text":"以下以通用的 Ultralytics Python 介面示範。請將 model.pt 改為你所選版本的有效權重檔；epochs、imgsz、batch 都需根據資料量與硬體資源調整。"},
+  {"type":"code","language":"PYTHON · TEMPLATE","code":"from ultralytics import YOLO\n\nmodel = YOLO('model.pt')  # 替換為實際權重\nresults = model.train(\n    data='data.yaml',\n    epochs=100,\n    imgsz=640,\n    batch=8,\n    seed=42\n)"},
+  {"type":"callout","title":"保持實驗可重現","text":"記錄資料版本、模型權重、random seed、套件版本與訓練設定。固定 random seed 有幫助，但不能保證不同硬體或環境完全一致。"},
+  {"type":"heading","text":"04 / 訓練後確認"},
+  {"type":"checklist","items":["確認 Loss 曲線與驗證指標有合理趨勢。","檢查是否存在明顯過擬合。","以實際圖片檢視漏檢與誤檢案例。","保存模型、設定檔及實驗紀錄。"]}
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "slug":"understand-map","sections":[
+  {"type":"heading","text":"01 / 混淆矩陣的核心概念"},
+  {"type":"paragraph","text":"在物件偵測中，評估預測是否正確不只看類別，也要考慮預測框與真實框的重疊程度，常以 IoU 門檻判定是否匹配。TP 表示正確偵測，FP 通常代表誤檢，FN 通常代表漏檢。"},
+  {"type":"heading","text":"02 / Precision 與 Recall"},
+  {"type":"list","items":["Precision = TP / (TP + FP)：模型預測為目標的結果中，有多少是真正的目標。","Recall = TP / (TP + FN)：所有真實目標中，有多少成功被模型找出。","若提高信心門檻，通常可能減少誤檢，但也可能增加漏檢；需要依情境取捨。"]},
+  {"type":"heading","text":"03 / AP 與 mAP 的差別"},
+  {"type":"paragraph","text":"AP 是某一類別在 Precision–Recall 曲線上的面積型摘要指標；mAP 是針對多個類別的 AP 取平均。mAP@0.50 使用 IoU=0.50；mAP@0.50:0.95 通常再平均多個 IoU 門檻（0.50 至 0.95，每 0.05 一個），要求更全面的定位品質。"},
+  {"type":"callout","title":"工業瑕疵偵測怎麼選指標？","text":"若漏掉瑕疵成本高，除了整體 mAP，更要關注重要類別的 Recall、漏檢例子與誤報率。最終門檻應由實際場域需求決定。"},
+  {"type":"heading","text":"04 / 結果報告應包含什麼"},
+  {"type":"checklist","items":["明確標註使用的 IoU 與 confidence 設定。","同時報告 Precision、Recall、mAP 指標。","分別呈現各類別結果，而不只看整體平均。","記錄代表性的誤檢與漏檢影像，分析可能原因。"]}
+ ]
+}
