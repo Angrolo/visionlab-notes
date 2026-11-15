@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="VisionLab Notes：以清晰的流程整理 YOLO 影像辨識與瑕疵偵測學習筆記，透過可延伸的內容規範快速建立知識頁面。">
+  <title>VisionLab Notes｜YOLO 影像辨識知識庫</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#/" class="brand" aria-label="VisionLab Notes 首頁">
+          <span class="brand-symbol" aria-hidden="true"><span></span></span>
+          <span class="brand-name">Vision<span>Lab</span><small>NOTES</small></span>
+        </a>
+        <nav class="header-nav" aria-label="主選單">
+          <a class="nav-home" href="#/">探索筆記</a>
+          <a href="#about">專案理念</a>
+          <a class="nav-cta" href="https://github.com/" target="_blank" rel="noopener noreferrer" title="上傳專案後可在此改成自己的 Repository URL">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container page-layout">
+      <aside class="sidebar" aria-label="筆記分類">
+        <div class="side-eyebrow"><span class="side-dot"></span> LEARNING PATH</div>
+        <h2 class="side-title">學習導覽</h2>
+        <a href="#/" class="side-link active" data-category="all"><span class="side-icon">◈</span><span>全部筆記</span><span id="all-count" class="side-count">–</span></a>
+        <div class="side-section-label">TOPICS / 主題分類</div>
+        <div id="category-menu"></div>
+        <div class="side-divider"></div>
+        <div class="sidebar-note">
+          <span class="sidebar-note-icon">✳</span>
+          <strong>為 AI 而設計的知識庫</strong>
+          <p>統一內容格式與開發規則，下一篇筆記也能維持一致品質。</p>
+          <a href="#about">了解專案設計 <span>↗</span></a>
+        </div>
+        <div class="sidebar-footer">BUILT TO LEARN. MADE TO GROW.</div>
+      </aside>
+
+      <div id="app" class="main-content" aria-live="polite">
+        <div class="loading-state"><span class="spinner"></span><p>正在載入筆記…</p></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div><span class="footer-symbol">◈</span> VisionLab Notes <span class="footer-sep">/</span> Keep learning, keep building.</div>
+        <div>Made with curiosity &amp; clear rules <span aria-hidden="true">✦</span></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

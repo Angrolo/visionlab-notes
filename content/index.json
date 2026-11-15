@@ -1,0 +1,17 @@
+{
+  "site": "VisionLab Notes",
+  "categories": [
+    {"id": "basics", "label": "基礎概念", "icon": "◎", "tone": "purple"},
+    {"id": "dataset", "label": "資料集製作", "icon": "▧", "tone": "teal"},
+    {"id": "training", "label": "模型訓練", "icon": "⌘", "tone": "blue"},
+    {"id": "evaluation", "label": "模型評估", "icon": "◴", "tone": "amber"}
+  ],
+  "articles": [
+    {"slug": "what-is-yolo", "title": "YOLO 是什麼？從零理解物件偵測", "category": "basics", "summary": "一次弄懂分類、偵測與分割的差別，以及 YOLO 的核心工作流程。", "minutes": 5, "level": "入門", "updated": "2026-11-15"},
+    {"slug": "annotation-guide", "title": "如何建立高品質的瑕疵標註", "category": "dataset", "summary": "從標註邊界框到類別命名，整理影響模型學習品質的重要細節。", "minutes": 6, "level": "入門", "updated": "2026-11-15"},
+    {"slug": "dataset-split", "title": "訓練集、驗證集與測試集怎麼分？", "category": "dataset", "summary": "理解資料切分、防止資料洩漏，以及小樣本資料集的常見陷阱。", "minutes": 7, "level": "實作", "updated": "2026-11-15"},
+    {"slug": "training-workflow", "title": "用 Ultralytics 開始第一個 YOLO 訓練", "category": "training", "summary": "認識 data.yaml、訓練指令與基本參數，建立可重現的訓練流程。", "minutes": 8, "level": "實作", "updated": "2026-11-15"},
+    {"slug": "small-object-detection", "title": "微小瑕疵偵測的改善方向", "category": "training", "summary": "針對目標過小、資料不平衡與複雜背景，規劃合理的改善策略。", "minutes": 7, "level": "進階", "updated": "2026-11-15"},
+    {"slug": "understand-map", "title": "讀懂 Precision、Recall 與 mAP", "category": "evaluation", "summary": "不只看準確率，學會辨別漏檢、誤檢，以及不同評估指標的意義。", "minutes": 6, "level": "入門", "updated": "2026-11-15"}
+  ]
+}

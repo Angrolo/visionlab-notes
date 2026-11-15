@@ -1,0 +1,14 @@
+{
+ "slug":"annotation-guide","sections":[
+  {"type":"heading","text":"01 / 標註品質為什麼重要？"},
+  {"type":"paragraph","text":"深度學習模型會從標註樣本中學習判斷規則。若相同瑕疵有時標註、有時忽略，或邊界框大小不一致，就可能導致模型預測不穩定。小目標尤其容易受到數個像素誤差影響。"},
+  {"type":"heading","text":"02 / 建立統一標註規範"},
+  {"type":"list","items":["類別名稱應固定，例如 scratch、stain、crack；同一現象不能任意換名稱。","邊界框應完整包住可辨識目標，盡量避免包含過多無關背景。","遮擋、反光、模糊或無法判斷的樣本應訂定明確處理原則。","定期抽查標註，避免同一類型瑕疵出現不同標註標準。"]},
+  {"type":"heading","text":"03 / YOLO 偵測標籤格式"},
+  {"type":"paragraph","text":"常見的 YOLO 物件偵測格式，每行由 class_id、x_center、y_center、width、height 共五個數值組成，座標相對於圖片寬高正規化至 0～1。類別從 0 起算。"},
+  {"type":"code","language":"YOLO LABEL · EXAMPLE","code":"# class_id x_center y_center width height\n0 0.520 0.430 0.120 0.080\n1 0.275 0.690 0.070 0.050"},
+  {"type":"callout","title":"注意","text":"此格式適用於 bounding box 偵測；YOLO 的分割任務通常使用由多個輪廓點構成的標註格式，兩者不可直接混用。"},
+  {"type":"heading","text":"04 / 標註完成前的確認"},
+  {"type":"checklist","items":["類別編號與 data.yaml 順序一致。","沒有超出圖片範圍的標註框。","空白背景圖片沒有誤標瑕疵。","已抽查小目標及邊界樣本。"]}
+ ]
+}
